@@ -4,10 +4,11 @@
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel share open:src",
+    "start": "npm-run-all --parallel open:src",
     "open:src": "node buildScripts/srcServer.js",
     "security-check": "nsp check",
-    "share": "lt --port 8000"
+    "localtunnel": "lt --port 8000",
+    "share": "npm-run-all --parallel open:src localtunnel"
 
   },
   "author": "Cory House",
