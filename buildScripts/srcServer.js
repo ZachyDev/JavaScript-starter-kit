@@ -1,8 +1,8 @@
-let express = require('express');
-let path = require('path');
-let open = require('open');
-let port = 8
-000;
+import express from 'express';
+import path from 'path';
+import open from 'open';
+
+let port = 8000;
 const app = express();
 
 app.get('/',function(req,res){
