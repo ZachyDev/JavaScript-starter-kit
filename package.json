@@ -8,8 +8,8 @@
     "open:src": "babel-node buildScripts/srcServer.js",
     "security-check": "nsp check",
     "localtunnel": "lt --port 8000",
-    "share": "npm-run-all --parallel open:src localtunnel"
-
+    "share": "npm-run-all --parallel open:src localtunnel",
+    "lint": "esw webpack.config.* src buildScripts --color"
   },
   "author": "Cory House",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "compression": "^1.7.4",
     "cross-env": "3.1.3",
     "css-loader": "0.25.0",
-    "eslint": "4.18.2",
+    "eslint": "^7.2.0",
     "eslint-plugin-import": "^2.21.1",
     "eslint-watch": "2.1.14",
     "express": "^4.17.1",
