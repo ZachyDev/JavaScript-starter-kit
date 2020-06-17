@@ -11,11 +11,11 @@ describe('we expect 10 + 10 to equal 20',() => {
 
 // check the matching text
 describe('Testing index.html',() => {
-    it('the h1 tag should have Hello World!',(done) => {
+    it('the h1 tag should have User List',(done) => {
         const indexFile = fs.readFileSync('./src/index.html','utf-8');
         jsdom.env(indexFile,(err,window) => {
             const h1 = window.document.getElementsByTagName('h1')[0];
-            expect(h1.innerHTML).to.equal('Hello World!');
+            expect(h1.innerHTML).to.equal('User List');
             done();
             window.close();
         })
