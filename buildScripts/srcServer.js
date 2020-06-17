@@ -19,7 +19,14 @@ app.use(require('webpack-dev-middleware')(compiler,{
 app.get('/',function(req,res){
     res.sendFile(path.join(__dirname,'../src/index.html'));
 });
-
+// add users route
+app.get('/users',function(req,res){
+    res.json([
+            { "id": 1,"Name": "Zachy","Gender": "Male", "Email": "moseti001@gmail.com"},
+            { "id": 2,"Name": "Finna","Gender": "Female", "Email": "finna@gmail.com"},
+            { "id": 3,"Name": "Rodgers","Gender": "Male", "Email": "roger@gmail.com"}
+    ])
+})
 app.listen(port,function(err){
     if (err) {
         console.log(err);
